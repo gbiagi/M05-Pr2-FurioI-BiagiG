@@ -18,10 +18,10 @@ while flg_00:
             print()
         if opc == 3:
             print("Elimina les consonants")
-            vocales = "aeiou "
+            vocales = "aeiou"
             nueva_frase = ""
             for i in frase:
-                if i not in vocales:
+                if i in vocales:
                     continue
                 else:
                     nueva_frase += i
