@@ -1,7 +1,7 @@
 menu_00 = "1.Introdueix una frase\n2.Elimina les vocals\n3.Elimina les consonants\n" \
           "4.Ordena la frase al revés i printala per pantalla\n5.Ordena les paraules de la frase en orde ascendent i printales per pantalla"
 flg_00 = True
-frase = "Frase prueba"
+frase = "Frase de prueba"
 #alum2
 while flg_00:
     print(menu_00)
@@ -18,16 +18,17 @@ while flg_00:
             print()
         if opc == 3:
             print("Elimina les consonants")
-            vocales = "aeiou"
+            vocales = "aeiou "
             nueva_frase = ""
             for i in frase:
                 if i in vocales:
-                    continue
-                else:
                     nueva_frase += i
+                else:
+                    continue
             print(nueva_frase)
             input("Enter to continue")
         if opc == 4:
             print()
         if opc == 5:
             print("Ordena les paraules de la frase en orde ascendent i printales per pantalla")
+
