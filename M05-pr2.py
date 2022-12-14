@@ -1,8 +1,7 @@
-menu_00 = "1.Introdueix una frase\n2.Elimina les vocals\n3.Elimina les consonants\n" \
-          "4.Ordena la frase al revés i printala per pantalla\n5.Ordena les paraules de la frase en orde ascendent i printales per pantalla"
+menu_00 = "1.Introdueix una frase\n2.Elimina les vocals\n3.Elimina les consonants\n4.Ordena la frase al revés i printala per pantalla\n5.Ordena les paraules de la frase en orde ascendent i printales per pantalla"
+
 flg_00 = True
 frase = ""
-#alum2
 while flg_00:
     print(menu_00)
     opc = input("Elige una opcion: ")
@@ -13,9 +12,26 @@ while flg_00:
     else:
         opc = int(opc)
         if opc == 1:
-            print()
-        if opc == 2:
-            print()
+            while frase == "":
+                frase = input("Introduce una frase:\n")
+                if frase == "":
+                    print("Frase vacia, escribe algo.")
+                else:
+                    break
+        if opc == 2: # elimina vocales
+            if frase == "":
+                print("Escribe primero una frase.")
+                input("\nEnter to continue\n")
+            else:
+                vocales = "aeiou"
+                frase_nueva = ""
+                for letra in frase.strip():
+                    if not letra in vocales:
+                        frase_nueva += letra
+
+                print(frase_nueva)
+                input("Enter to continue.")
+
         if opc == 3:
             print("Elimina les consonants")
             if frase == "":
@@ -30,7 +46,16 @@ while flg_00:
             print(nueva_frase)
             input("Enter para continuar")
         if opc == 4:
-            print()
+            if frase == "":
+                print("Escribe primero una frase.")
+                input("\nEnter to continue\n")
+            else:
+                frase_nueva = ""
+                for letra in frase[::-1]:
+                    frase_nueva += letra
+
+                print(frase_nueva)
+
         if opc == 5:
             if frase == "":
                 print("Primero tienes que introducir una frase.")
