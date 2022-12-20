@@ -1,4 +1,5 @@
-# M05-Pr2-
+# M05 Entorns de desenvolupament
+# Practica 2 
 Hola, somos dos alumnos del instituto Esteve Terradas, Geanfranco e Isaac. Hemos realizado un menu en python que tiene las siguientes opciones:
 1) Introdueix una frase
 2) Elimina les vocals
